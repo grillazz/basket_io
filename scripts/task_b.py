@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+
+#B) How would you find files that begin with "0aH" and delete them given a folder (with subfolders)?
+#Assume there are many files in the folder.
+
 import os
 
 
