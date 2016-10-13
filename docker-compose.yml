@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+
+  db:
+    image: postgres
+
+  web:
+    build: .
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    command: ./conf/up_web.sh
+    links:
+      - db
