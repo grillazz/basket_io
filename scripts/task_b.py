@@ -7,12 +7,18 @@ import os
 
 
 def case_b():
-    prefixed = [filename for filename in os.listdir('folder_name') if filename.startswith("OaH")]
+    prefixed = [filename for filename in os.listdir('test') if filename.startswith("0aH")]
     print(prefixed)
 
 
+def case_b1():
+    for subdir, dirs, files in os.walk('test'):
+        print(files)
+        [os.remove(os.path.join(subdir, x)) for x in files if x.startswith("0aH")]
+
+
 def main():
-    case_b()
+    case_b1()
 
 
 if __name__ == '__main__':
