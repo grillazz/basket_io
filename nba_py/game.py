@@ -3,7 +3,7 @@ from nba_py.constants import *
 
 
 class Boxscore:
-    _endpoint = 'boxscore'
+    _endpoint = 'boxscorev2'
 
     def __init__(self,
                  game_id,
@@ -61,7 +61,7 @@ class Boxscore:
 
 
 class BoxscoreScoring(Boxscore):
-    _endpoint = 'boxscorescoring'
+    _endpoint = 'boxscorescoringv2'
 
     def sql_players_scoring(self):
         return _api_scrape(self.json, 13)
@@ -71,7 +71,7 @@ class BoxscoreScoring(Boxscore):
 
 
 class BoxscoreUsage(Boxscore):
-    _endpoint = 'boxscoreusage'
+    _endpoint = 'boxscoreusagev2'
 
     def sql_players_usage(self):
         return _api_scrape(self.json, 13)
@@ -81,7 +81,7 @@ class BoxscoreUsage(Boxscore):
 
 
 class BoxscoreMisc(Boxscore):
-    _endpoint = 'boxscoremisc'
+    _endpoint = 'boxscoremiscv2'
 
     def sql_players_misc(self):
         return _api_scrape(self.json, 13)
@@ -91,7 +91,7 @@ class BoxscoreMisc(Boxscore):
 
 
 class BoxscoreAdvanced(Boxscore):
-    _endpoint = 'boxscoreadvanced'
+    _endpoint = 'boxscoreadvancedv2'
 
     def sql_players_advanced(self):
         return _api_scrape(self.json, 13)
@@ -101,7 +101,7 @@ class BoxscoreAdvanced(Boxscore):
 
 
 class BoxscoreFourFactors(Boxscore):
-    _endpoint = 'boxscorefourfactors'
+    _endpoint = 'boxscorefourfactorsv2'
 
     def sql_players_four_factors(self):
         return _api_scrape(self.json, 13)
